@@ -16,6 +16,8 @@ TOTEM is a 38 key column-staggered split keyboard running [ZMK](https://zmk.dev/
 
 Based on [Miryoku](https://github.com/manna-harbour/miryoku) with the following modifications:
 
+![Keymap](https://github.com/datsfilipe/zmk-config-corne/raw/main/keymap-drawer/corne.svg)
+
 - **QWERTY** base layer instead of Colemak-DH
 - **Vim-style navigation** (hjkl = left/down/up/right) on NAV layer
 - **Programmer-friendly symbols** on right side of SYM layer
