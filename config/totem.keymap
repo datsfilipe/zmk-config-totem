@@ -20,6 +20,7 @@
 #define SYM  3
 #define FUN  4
 #define MEDIA 5
+#define GAME 6
 
 / {
     behaviors {
@@ -57,7 +58,7 @@
             bindings = <
                 &kp Q       &kp W       &kp E          &kp R          &kp T          &kp Y        &kp U          &kp I        &kp O       &kp P
                 &hm LGUI A  &hm LALT S  &hm LCTRL D    &hm LSHFT F    &kp G          &kp H        &hm RSHFT J    &hm RCTRL K  &hm LALT L  &hm RGUI SEMI
-&kp LEFT_SHIFT  &kp Z       &kp X       &kp C          &kp V          &kp B          &kp N        &kp M          &kp COMMA    &kp DOT     &kp FSLH       &kp RIGHT_SHIFT
+&kp LEFT_SHIFT  &kp Z       &kp X       &kp C          &kp V          &kp B          &kp N        &kp M          &kp COMMA    &kp DOT     &kp FSLH       &tog GAME
                                         &lt MEDIA ESC  &lt SYM SPACE  &lt FUN TAB    &lt NUM DEL  &lt NAV ENTER  &kp BSPC
             >;
         };
@@ -189,6 +190,34 @@
        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT  &none
 &none  &none         &none         &none         &none         &none           &none       &none         &none         &none       &none  &none
                                    &trans        &none         &none           &kp C_STOP  &kp C_PP      &kp C_MUTE
+            >;
+        };
+
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+        game_layer {
+            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+
+            label = "GAME";
+
+            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+            // Same layout as BASE but with plain keys (no homerow mods, no layer-taps)
+            // Toggle back to BASE with the same key position (right outer thumb area)
+            //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+            //             ┃     Q     ┃     W     ┃     E     ┃     R     ┃     T     ┃   ┃     Y     ┃     U     ┃     I     ┃     O     ┃     P     ┃
+            //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+            //             ┃     A     ┃     S     ┃     D     ┃     F     ┃     G     ┃   ┃     H     ┃     J     ┃     K     ┃     L     ┃     ;     ┃
+            // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
+            // ┃   LSHFT   ┃     Z     ┃     X     ┃     C     ┃     V     ┃     B     ┃   ┃     N     ┃     M     ┃     ,     ┃     .     ┃     /     ┃ tog GAME  ┃
+            // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+            //                                     ┃    ESC    ┃   SPACE   ┃    TAB    ┃   ┃    DEL    ┃   ENTER   ┃   BSPC    ┃
+            //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+
+            bindings = <
+                &kp Q           &kp W   &kp E    &kp R      &kp T        &kp Y    &kp U      &kp I      &kp O    &kp P
+                &kp A           &kp S   &kp D    &kp F      &kp G        &kp H    &kp J      &kp K      &kp L    &kp SEMI
+&kp LEFT_SHIFT  &kp Z           &kp X   &kp C    &kp V      &kp B        &kp N    &kp M      &kp COMMA  &kp DOT  &kp FSLH  &tog GAME
+                                        &kp ESC  &kp SPACE  &kp TAB      &kp DEL  &kp ENTER  &kp BSPC
             >;
         };
     };
