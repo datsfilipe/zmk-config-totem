@@ -134,9 +134,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &none     &none     &none      &none      &none    &kp LPAR  &kp RPAR  &kp MINUS  &kp PLUS  &kp EQUAL
-       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &kp LBKT  &kp RBKT  &kp UNDER  &kp PIPE  &kp SQT
-&none  &none     &none     &none      &none      &none    &kp LBRC  &kp RBRC  &kp BSLH   &kp DQT   &kp TILDE  &none
+       &none     &none     &none      &none      &none    &kp LPAR  &kp RPAR  &kp MINUS  &kp PLUS   &kp EQUAL
+       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &kp LBKT  &kp RBKT  &kp UNDER  &kp GRAVE  &kp SQT
+&none  &none     &none     &none      &none      &none    &kp LBRC  &kp RBRC  &kp BSLH   &kp DQT    &kp TILDE  &none
                            &none      &none      &none    &trans    &none     &none
             >;
         };
@@ -214,10 +214,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp Q           &kp W   &kp E    &kp R      &kp T        &kp Y    &kp U      &kp I      &kp O    &kp P
-                &kp A           &kp S   &kp D    &kp F      &kp G        &kp H    &kp J      &kp K      &kp L    &kp SEMI
-&kp LEFT_SHIFT  &kp Z           &kp X   &kp C    &kp V      &kp B        &kp N    &kp M      &kp COMMA  &kp DOT  &kp FSLH  &tog GAME
-                                        &kp ESC  &kp SPACE  &kp TAB      &kp DEL  &kp ENTER  &kp BSPC
+                &kp Q  &kp W  &kp E    &kp R      &kp T      &kp Y    &kp U      &kp I      &kp O    &kp P
+                &kp A  &kp S  &kp D    &kp F      &kp G      &kp H    &kp J      &kp K      &kp L    &kp SEMI
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C    &kp V      &kp B      &kp N    &kp M      &kp COMMA  &kp DOT  &kp FSLH  &tog GAME
+                              &kp ESC  &kp SPACE  &kp TAB    &kp DEL  &kp ENTER  &kp BSPC
             >;
         };
     };
